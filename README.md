@@ -1,4 +1,40 @@
-# Getting Started with Create React App
+# RS v0.0.1
+
+Wanted to create a better desktop experience for viewing high quality photography. 
+
+Possible directions:
+ - better use of space
+ - less cludder
+ - more customization
+ - less scrolling; more images
+ - details on selection of image 
+ - aesthetic exp - flow
+ - add controls set to aggregate high quality photography and weight the distrib. 
+ - columns of grids, variation of picture size
+ - turn it into a stock ticker system
+ - figure out how to not have duplicates
+ - git creative, get good
+
+
+
+begining with a simple image flexbox grid. May then do more with fullscreen; widescreen monitors. 
+workshop it
+
+
+photo credits r/sfwpornnetwork, r/NewYorkNine, asyncpraw - in prj fuzzy-chainsaw
+
+
+![rs v0.0.1](https://media.giphy.com/media/pIPk8osy4b0A6PFeXk/giphy-downsized-large.gif)
+
+
+
+
+
+
+
+
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
