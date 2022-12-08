@@ -5,20 +5,7 @@ import Gallery from "../Gallery/Gallery";
 
 
 const Backdrop = (props) => {
-    const handleKeydown = useCallback((event) => {
-        const { key, keyCode } = event;
-        if(keyCode === 27){
-            props.onClose()
-        }
-    }, [props.onClose])
 
-    useEffect(() => {
-        window.addEventListener('keydown', handleKeydown)
-
-        return () => {
-            window.removeEventListener('keydown', handleKeydown)
-        }
-    }, [handleKeydown])
     return (
         <div className={classes.backdrop} onClick={props.onClose}></div>
     )

@@ -10,8 +10,6 @@ import classes from "./Root.module.css";
 
 const imageData = (resJson) => {
     return resJson.map((e) => {
-
-
         const widthByHeight = e.width / e.height;
         var h = 20;
         var w = widthByHeight * h;
@@ -22,7 +20,7 @@ const imageData = (resJson) => {
         }
 
         if(e.reddit_url.includes("redgif")){
-            console.log("redgif", e)
+            // console.log("redgif", e)
 
             const ImageCard = styled.div`
                 overflow: hidden;
@@ -49,8 +47,6 @@ const imageData = (resJson) => {
             )
         }
 
-
-
         const ImageCard = styled.div`
         overflow: hidden;
         border: aliceblue 2px solid;
@@ -59,9 +55,8 @@ const imageData = (resJson) => {
         width: ${w}em;
         `;
 
-
         if(e.content_type === "gif"){
-            console.log("contentType: gif; element: ", e)
+            // console.log("contentType: gif; element: ", e)
             const Image = styled.div`
             background-image: url("${e.reddit_url}");
             background-size: contain;
@@ -75,14 +70,13 @@ const imageData = (resJson) => {
                 </ImageCard>
             )
 
-
         }
 
-        if(e.content_type === "gif/mp4"){
-            console.log("contentType: gif/mp4; element: ", e)
+        if(e.content_type === "gif/mp4" || e.content_type === "gfycat/gif/mp4"){
+            // console.log("contentType: gif/mp4; element: ", e)
             return (
                 <ImageCard key={e.id}>
-                    <video loop autoPlay type="video/mp4" src={e.reddit_url} id={`${e.id}/${e.content_type}`} height={'100%'} width={'100%'} />
+                    <video loop autoPlay muted type="video/mp4" src={e.reddit_url} id={`${e.id}/${e.content_type}`} height={'100%'} width={'100%'} />
                 </ImageCard>
             )
         }
@@ -95,7 +89,7 @@ const imageData = (resJson) => {
         height: 100%;
         `;
 
-        console.log(e)
+        // console.log(e)
         return(
             <ImageCard key={e.id}>
                 <Image />
@@ -115,6 +109,7 @@ const router = createBrowserRouter([
                 loader: async (args) => {
                     const res = await fetch('http://localhost:5000/reddit', { method: "GET" })
                     const resJson = await res.json()
+                    console.log("loader executed, returning imageData")
                     return imageData(resJson)
                 }
             }

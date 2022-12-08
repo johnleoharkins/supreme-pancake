@@ -6,7 +6,6 @@ import styled from "styled-components";
 
 const Gallery = ({ loaderData }) => {
 
-
     return (
         <div className={classes.container}>
             {loaderData}
@@ -14,4 +13,4 @@ const Gallery = ({ loaderData }) => {
     )
 };
 
-export default React.memo(Gallery);
+export default Gallery;
