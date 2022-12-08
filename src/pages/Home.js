@@ -10,6 +10,7 @@ const Home = () => {
 
     useEffect(() => {
         if(imageData.length !== data.length){
+            console.log("imageData will change...")
             setImageData(data)
         }
 
