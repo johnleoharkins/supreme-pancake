@@ -24,7 +24,7 @@ workshop it
 photo credits r/sfwpornnetwork, r/NewYorkNine, asyncpraw - in prj fuzzy-chainsaw
 
 
-![rs v0.0.1](https://media.giphy.com/media/pIPk8osy4b0A6PFeXk/giphy-downsized-large.gif)
+![rs v0.0.1](https://media.giphy.com/media/QANvo83sZFGHKJfzkw/giphy.gif)
 
 
 
